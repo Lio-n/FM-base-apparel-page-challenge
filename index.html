@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <section class="root" role="main">
+      <!-- Header -->
+      <header class="header" role="header">
+        <img src="./images/logo.svg" alt="logo" />
+      </header>
+      <!-- Figure Image-->
+      <figure class="container-image">
+        <img
+          class="image__desktop"
+          src="./images/hero-desktop.jpg"
+          alt="hero-desktop"
+        />
+        <img
+          class="image__mobile"
+          src="./images/hero-mobile.jpg"
+          alt="hero-mobile"
+        />
+      </figure>
+      <!-- Welcome -->
+      <div class="welcome">
+        <!-- Welcome Container Texto -->
+        <div class="welcome__cont-txt">
+          <h1 class="welcome__title"><span>WE'RE</span> COMING SOON</h1>
+          <p class="welcome__paragraph">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </div>
+        <!-- Form -->
+        <form class="form">
+          <input class="form__input" type="text" placeholder="Email Address" />
+          <img class="form__error" src="./images/icon-error.svg" alt="error" />
+          <button class="form__button">
+            <img src="./images/icon-arrow.svg" alt="arrow" />
+          </button>
+          <h4 class="form__warning">Please provide a valid email</h4>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

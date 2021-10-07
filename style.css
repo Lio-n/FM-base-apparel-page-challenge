@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.root {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 97px 273.33px auto;
+}
+@media (min-width: 968px) {
+  .root {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+      "one two"
+      "three two";
+  }
+}
+/* Header */
+.header {
+  padding: 2rem;
+  height: auto;
+}
+
+/* Figure Image */
+.container-image > img {
+  width: 100%;
+  object-fit: cover;
+}
+.image__desktop {
+  display: none;
+}
+.image__mobile {
+  max-height: 272px;
+}
+
+@media (min-width: 968px) {
+  .image__desktop {
+    display: initial;
+    height: 100%;
+  }
+  .image__mobile {
+    display: none;
+  }
+}
+/* Welcome */
+.welcome {
+  padding: 3rem 2rem;
+}
+@media (min-width: 968px) {
+  .header {
+    grid-area: one;
+    padding: 3rem 0 0 5rem;
+  }
+  .container-image {
+    grid-area: two;
+  }
+}
+/* Welcome Container Texto */
+.welcome__cont-txt {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.welcome__title > span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.welcome__title {
+  color: hsl(0, 6%, 24%);
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  margin-bottom: 1rem;
+}
+.welcome__paragraph {
+  color: hsl(0, 36%, 70%);
+  font-weight: 600;
+}
+@media (min-width: 968px) {
+  .welcome {
+    grid-area: three;
+    padding: 6rem 0 0 5rem;
+  }
+  .welcome__cont-txt {
+    width: 443px;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .welcome__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .welcome__paragraph {
+    line-height: 1.5rem;
+  }
+}
+/* Form */
+.form {
+  position: relative;
+}
+.form__input {
+  border: hsl(0, 36%, 70%) 1px solid;
+  border-radius: 5rem;
+  font-size: 1rem;
+  height: 3rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  width: 90%;
+  vertical-align: baseline;
+  display: flex;
+  color: hsl(0, 36%, 70%);
+  outline: none;
+}
+.form__input:focus {
+  border: hsl(0, 93%, 68%) solid 2px;
+}
+.form__button {
+  position: absolute;
+  width: 20%;
+  border: none;
+  right: -2px;
+  top: 0;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  box-shadow: 0 10px 15px rgba(206, 151, 151, 0.2);
+  height: 48px;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.form__button:hover {
+  background: #f8bfbf;
+}
+@media (min-width: 968px) {
+  .form {
+    width: 443px;
+  }
+}
+.form__error {
+  display: none;
+  position: absolute;
+  right: 25%;
+  border-radius: 5rem;
+  top: 15px;
+}
+.form__warning {
+  display: none;
+  position: absolute;
+  padding: 0.5rem 0 0 1.5rem;
+  color: hsl(0, 93%, 68%);
+}
+.open {
+  display: initial;
+}
+.remove {
+  display: none;
+}
